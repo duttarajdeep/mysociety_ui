@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+  </head>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Raleway&display=swap"
+    rel="stylesheet"
+  />
+  <body>
+    <nav id="navbar">
+      <h1 class="logo">
+        <i class="fa fa-home p-1"></i><a href="index.html">My Society</a>
+      </h1>
+      <ul>
+        <li><i class="fa fa-bell-o p-1"></i><a href="#">Notifications</a></li>
+        <li><i class="fa fa-comments p-1"></i><a href="#">Noticeboard</a></li>
+        <li><i class="fa fa-user-circle-o p-1"></i><a href="#">Username</a></li>
+        <li>
+          <i class="fa fa-user-circle-o p-1"></i
+          ><a href="dashboard_admin.html">Admin</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="content-dashboard">
+      <div class="sidebar">
+        <ul>
+          <li>
+            <a href="dashboard_admin.html"
+              ><i class="fa fa-file-text-o"></i>My Dashboard</a
+            >
+          </li>
+          <li>
+            <a href="owners.html"
+              ><i class="fa fa-user-secret" aria-hidden="true"></i>Owners</a
+            >
+            <a href="bills_admin.html"><i class="fa fa-money"></i>Billing</a>
+            <a href="complain_admin.html"
+              ><i class="fa fa-ticket"></i>Complain</a
+            >
+            <a href="notice_admin.html"
+              ><i class="fa fa-envelope"></i>Notices</a
+            >
+            <a href="maintenance_admin.html"
+              ><i class="fa fa-cog"></i>Maintenance</a
+            >
+            <a href="staff_payroll.html"
+              ><i class="fa fa-users"></i>Staff & Payroll</a
+            >
+            <a href="vendors.html"><i class="fa fa-cart-plus"></i>Vendors</a>
+          </li>
+        </ul>
+      </div>
+
+
+      <!-- Bills section -->
+
+      <div>
+        <div>
+          <h3 class="text-primary p-1">
+            <a href="" class="px-half"><i class="fa fa-money"></i> Raise new bill</a>
+            <a href="" class="px-half"><i class="fa fa-edit"></i> Update payment</a>
+            <a href="" class="px-half"><i class="fa fa-calendar"></i> Send payment reminder</a>
+            <a href="" class="px-half"><i class="fa fa-envelope"></i> Email receipt</a>
+          </h3>
+          <h3 class="text-primary p-1">
+            <i class="fa fa-search px-half"></i> Search maintenance bills
+          </h3>
+          <div class="box search-box-bill">
+            <input type="text" class="" placeholder="Enter search term" />
+
+            <select
+              class="select-filter"
+              name="searchYearFilter"
+              id="searchYearFilter"
+            >
+              <option value="searchBy">Select Year</option>
+              <option value="flatNo">2020</option>
+              <option value="block">2019</option>
+              <option value="name">2018</option>
+
+            </select>
+
+
+            <select
+              class="select-filter"
+              name="searchFilter"
+              id="searchFilter"
+            >
+              <option value="searchBy">Search By</option>
+              <option value="flatNo">Flat no</option>
+              <option value="block">Block</option>
+              <option value="name">Owner name</option>
+              <option value="contactNo">Contact no</option>
+              <option value="email">Email</option>
+            </select>
+            <a href="" class="btn btn-dark">Search</a>
+          </div>
+          <h1 class="main-content-heading p-1">
+            Pending bills
+          </h1>
+          <div class="box">
+            <div class="bills-table">
+            <table>
+              <thead>
+                <tr class="table-head-row">
+                  <td>Bill no</td>
+                  <td>Month</td>
+                  <td>Amount</td>
+                  <td>Due date</td>
+                  <td>Late fine</td>
+                  <td>Outstanding Amount</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="table-body-row">
+                  <td class="py-1">123456789</td>
+                  <td>Jan</td>
+                  <td>2200</td>
+                  <td>10/02/2020</td>
+                  <td>300</td>
+                  <td>2500</td>
+                </tr>
+                <tr class="table-body-row">
+                  <td class="py-1">123456790</td>
+                  <td>Feb</td>
+                  <td>2200</td>
+                  <td>10/03/2020</td>
+                  <td>100</td>
+                  <td>4800</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          </div>
+          <h1 class="main-content-heading p-1">
+            Bill payment history
+          </h1>
+          <div class="box">
+            <div class="bills-table">
+            <table>
+              <thead>
+                <tr class="table-head-row">
+                  <td>Bill No</td>
+                  <td>Bill Amount (Rs)</td>
+                  <td>Payment Method</td>
+                  <td>Payment Date</td>
+                  <td>Transaction ID</td>
+                  <td>Actions</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="table-body-row">
+                  <td class="py-1">123456789</td>
+                  <td>2200</td>
+                  <td>Paytm</td>
+                  <td>21/06/2020</td>
+                  <td>fhh37hfhf7</td>
+                  <td>
+                    <a href=""><i class="fa fa-edit px-half" aria-hidden="true"></i></a>
+                    <a href=""><i class="fa fa-envelope-o px-half" aria-hidden="true"></i></a>
+                    <a href=""><i class="fa fa-download px-half" aria-hidden="true"></i></a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          </div>
+        </div>
+
+
+
+      </div>
+
+
+
+
+      <!-- notice board section -->
+      <div class="box-notice bg-grey">
+        <h3 class="p-1">Noticeboard</h3>
+        <div class="notice-box py-1">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa odit
+          consequuntur magnam recusandae nisi soluta pariatur perspiciatis dicta
+          error est?
+        </div>
+        <div class="notice-box py-1">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa odit
+          consequuntur magnam recusandae nisi soluta pariatur perspiciatis dicta
+          error est?
+        </div>
+        <div class="notice-box py-1">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa odit
+          consequuntur magnam recusandae nisi soluta pariatur perspiciatis dicta
+          error est?
+        </div>
+        <div class="notice-box py-1">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa odit
+          consequuntur magnam recusandae nisi soluta pariatur perspiciatis dicta
+          error est?
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
